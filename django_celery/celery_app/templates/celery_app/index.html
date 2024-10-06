@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale-1.0' />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Home Page</h1><hr>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+        {% if result.id %}
+            <p><b>Result ID :</b> {{result.id}} :
+            <a href= "{% url 'result' result.id %}">Check Result</a>
+            </p>
+        {% endif %}
+        
+    </body>
+</html>

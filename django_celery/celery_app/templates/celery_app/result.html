@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale-1.0' />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Result Page</h1><hr>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </nav>
+
+        <h3> Result </h3>
+        {%if result%}
+            <h5>Result ID : {{result.task_id}}</h5>
+            <h5>Result Status : {{result.state}}</h5>
+            <h5>Result : {{result.result}}</h5>
+        {% endif %}
+        <h5>
+    </body>
+</html>
